@@ -11,13 +11,13 @@ end
 
 Quando(/^preencher os campos obrigatorios na aba Add Employee$/) do
 	click_link('PIM')
-	click_link('Add Employee')
-	fill_in('firstName', :with=> 'Thiago')
-	fill_in('lastName', :with=> 'Matsumoto')
+	click_link('menu_pim_addEmployee')
+	fill_in('firstName', :with=> 'Mary')
+	fill_in('lastName', :with=> 'Peace')
 	click_button('btnSave')
 
 end
 
 Então(/^empregado cadastrado com sucesso$/) do
-	should have_content('Thiago Matsumoto')
+	should have_content('Mary Peace')
 end
